@@ -19,8 +19,14 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+/*
+|--------------------------------------------------------------------------
+| Frontend
+|--------------------------------------------------------------------------
+*/
+// Trang Chủ
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('theme-default.pages.home');
+})->name('frontend.pages.home');
 
 
