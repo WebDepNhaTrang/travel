@@ -11,7 +11,7 @@
 
 @section('content')
 	<!-- Insert content here -->
-    <h1>Content Section</h1>
+    <h1>Home Section</h1>
 @endsection
 
 @section('script')

@@ -26,15 +26,15 @@ Route::group(['prefix' => 'admin'], function () {
 */
 // Trang Chủ
 Route::get('/', function () {
-    return view('frontend.pages.home');
+    return view('theme-default.pages.home');
 })->name('frontend.pages.home');
 
 // Giới Thiệu
 Route::get('/gioi-thieu.html', function (){
-    return view('frontend.pages.about');
+    return view('theme-default.pages.about');
 })->name('frontend.pages.about');
 
 // Liên Hệ
 Route::get('/lien-he.html', function (){
-    return view('frontend.pages.contact');
+    return view('theme-default.pages.contact');
 })->name('frontend.pages.contact');
