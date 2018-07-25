@@ -26,7 +26,10 @@ Route::group(['prefix' => 'admin'], function () {
 */
 // Trang Chủ
 Route::get('/', function () {
-    return view('theme-default.pages.home');
+    return view('frontend.pages.home');
 })->name('frontend.pages.home');
 
-
+// Liên Hệ
+Route::get('/lien-he.html', function (){
+    return view('frontend.pages.contact');
+})->name('frontend.pages.contact');
