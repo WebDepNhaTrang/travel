@@ -1,4 +1,4 @@
-@extends('theme-default.layouts.master')
+@extends('frontend.layouts.master')
 
 @section('title', 'Liên Hệ')
 @section('description', '')

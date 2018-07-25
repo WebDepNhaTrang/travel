@@ -1,6 +1,6 @@
-@extends('frontend.layouts.master')
+@extends('theme-default.layouts.master')
 
-@section('title', 'Trang Chủ')
+@section('title', 'Giới Thiệu')
 @section('description', '')
 
 @section('fb_url', url('/'))
@@ -11,10 +11,9 @@
 
 @section('content')
 	<!-- Insert content here -->
-    <h1>Content Section</h1>
+    <h1>About Section</h1>
 @endsection
 
 @section('script')
     <!-- Insert script here -->
 @endsection
-    

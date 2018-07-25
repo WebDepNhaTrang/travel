@@ -28,24 +28,24 @@
         <!-- Place favicon.ico in the root directory -->
 
 		<!-- all css here -->
-        @include('theme-default.partials.styles')
+        @include('frontend.partials.styles')
         
         @yield('css')
 
         <!-- Google Analytics gtag js -->
-        @include('theme-default.google.analytics')
+        @include('frontend.google.analytics')
     </head>
     <body>
         <!-- Facebook SDK js -->
-        @include('theme-default.facebook.facebook-sdk')
+        @include('frontend.facebook.facebook-sdk')
 
-        @include('theme-default.partials.header')
+        @include('frontend.partials.header')
 
         @yield('content')
 
-        @include('theme-default.partials.footer')
+        @include('frontend.partials.footer')
 
-        @include('theme-default.partials.scripts')
+        @include('frontend.partials.scripts')
 
         @yield('script')
 

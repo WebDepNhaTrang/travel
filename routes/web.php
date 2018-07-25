@@ -29,6 +29,11 @@ Route::get('/', function () {
     return view('frontend.pages.home');
 })->name('frontend.pages.home');
 
+// Giới Thiệu
+Route::get('/gioi-thieu.html', function (){
+    return view('frontend.pages.about');
+})->name('frontend.pages.about');
+
 // Liên Hệ
 Route::get('/lien-he.html', function (){
     return view('frontend.pages.contact');
