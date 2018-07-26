@@ -22,7 +22,7 @@
         <meta property="og:title"         content="@yield('fb_title')" />
         <meta property="og:description"   content="@yield('fb_des')" />
         <meta property="og:image"         content="@yield('fb_img')" />
-   
+        <meta property="og:site_name"     content=""/>
 
         <link rel="shortcut icon" type="image/png" href="">
         <!-- Place favicon.ico in the root directory -->
@@ -38,12 +38,17 @@
     <body>
         <!-- Facebook SDK js -->
         @include('theme-default.facebook.facebook-sdk')
+        
+        <div id="colorlib-page">
+            <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+            <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+                @include('theme-default.partials.header')
 
-        @include('theme-default.partials.header')
+                @include('theme-default.partials.footer')
+            </aside>
 
-        @yield('content')
-
-        @include('theme-default.partials.footer')
+            @yield('content')
+        </div>
 
         @include('theme-default.partials.scripts')
 
