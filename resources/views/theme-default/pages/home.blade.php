@@ -12,60 +12,35 @@
 @section('content')
 	<!-- Insert content here -->
 		<div id="colorlib-main">
+			<?php
+				$banners = getAllBanners('*', 'order', 'asc');
+			?>
+			@if($banners->count() > 0)
 			<aside id="colorlib-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
-				   	<li style="background-image: url(images/img_bg_1.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>An Inspiring Built Space</h1>
-						   					<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url(images/img_bg_2.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>Interior Design Studio</h1>
-												<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
-				   	<li style="background-image: url(images/img_bg_3.jpg);">
-				   		<div class="overlay"></div>
-				   		<div class="container-fluid">
-				   			<div class="row">
-					   			<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
-					   				<div class="slider-text-inner">
-					   					<div class="desc">
-						   					<h1>The National Gallery</h1>
-												<h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2>
-												<p><a class="btn btn-primary btn-learn">View Project <i class="icon-arrow-right3"></i></a></p>
-											</div>
-					   				</div>
-					   			</div>
-					   		</div>
-				   		</div>
-				   	</li>
+						@foreach($banners as $v)
+				   		<li style="background-image: url({{ Voyager::image($v->image) }});">
+							<div class="overlay"></div>
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
+										<div class="slider-text-inner">
+											<div class="desc">
+												<h1>{{ $v->title }}</h1>
+												<h2>{{ $v->content }}</h2>
+													<p><a href="{{ $v->link_btn }}" class="btn btn-primary btn-learn">{{ $v->text_btn }} <i class="icon-arrow-right3"></i></a></p>
+												</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				   		</li>
+						@endforeach
 				  	</ul>
 			  	</div>
 			</aside>
+			@endif
 
 			<div class="colorlib-about">
 				<div class="colorlib-narrow-content">
