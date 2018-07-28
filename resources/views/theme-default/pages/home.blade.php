@@ -177,31 +177,31 @@
 				</div>
 			</div>
 			
-			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+			<div id="colorlib-counter" class="colorlib-counters" style="background-image: url({{ Voyager::image(setting('about.st3_background')) }});" data-stellar-background-ratio="0.5">
 				<div class="overlay"></div>
 				<div class="colorlib-narrow-content">
 					<div class="row">
 					</div>
 					<div class="row">
 						<div class="col-md-3 text-center animate-box">
-							<span class="icon"><i class="flaticon-skyline"></i></span>
-							<span class="colorlib-counter js-counter" data-from="0" data-to="1539" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Projects</span>
+							<span class="icon"><i class="flaticon-hotel"></i></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number1') }}" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">{{ setting('about.st3_title1') }}</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="icon"><i class="flaticon-engineer"></i></span>
-							<span class="colorlib-counter js-counter" data-from="0" data-to="3653" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Employees</span>
+							<span class="icon"><i class="flaticon-hotel-2"></i></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number2') }}" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">{{ setting('about.st3_title2') }}</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="icon"><i class="flaticon-architect-with-helmet"></i></span>
-							<span class="colorlib-counter js-counter" data-from="0" data-to="5987" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Constructor</span>
+							<span class="icon"><i class="flaticon-money"></i></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number3') }}" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">{{ setting('about.st3_title3') }}</span>
 						</div>
 						<div class="col-md-3 text-center animate-box">
-							<span class="icon"><i class="flaticon-worker"></i></span>
-							<span class="colorlib-counter js-counter" data-from="0" data-to="3999" data-speed="5000" data-refresh-interval="50"></span>
-							<span class="colorlib-counter-label">Partners</span>
+							<span class="icon"><i class="flaticon-family"></i></span>
+							<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number4') }}" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="colorlib-counter-label">{{ setting('about.st3_title4') }}</span>
 						</div>
 					</div>
 				</div>
