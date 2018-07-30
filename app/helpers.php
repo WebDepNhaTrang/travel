@@ -36,7 +36,7 @@ if(! function_exists('getAllHotels')){
  */
 if(! function_exists('getAllApartments')){
     function getAllApartments($select='*', $order_col, $order_by="asc", $paginate = 3){
-        $item = App\Hotel::select($select)
+        $item = App\Apartment::select($select)
                 ->orderBy($order_col, $order_by)
                 ->paginate($paginate);
         return $item;

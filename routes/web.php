@@ -34,10 +34,15 @@ Route::get('/gioi-thieu.html', function (){
     return view('theme-default.pages.about');
 })->name('frontend.pages.about');
 
-// Liên Hệ
+// Khách Sạn
 Route::get('/khach-san.html', function (){
     return view('theme-default.pages.hotel');
 })->name('frontend.pages.hotel');
+
+// Căn Hộ
+Route::get('/can-ho.html', function (){
+    return view('theme-default.pages.apartment');
+})->name('frontend.pages.apartment');
 
 // Liên Hệ
 Route::get('/lien-he.html', function (){
