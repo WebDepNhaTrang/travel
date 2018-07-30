@@ -12,12 +12,12 @@
 @section('content')
 	<!-- Insert content here -->
     <div id="colorlib-main">
-        <div class="colorlib-contact">
+        <div class="colorlib-contact" style="padding: 5em 0;">
             <div class="colorlib-narrow-content">
                 <div class="row">
                     <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                        <span class="heading-meta">Liên Hệ</span>
-                        <h2 class="colorlib-heading">Liên hệ với chúng tôi</h2>
+                        <span class="heading-meta">{{ setting('contact.title') }}</span>
+                        <h2 class="colorlib-heading">{{ setting('contact.heading') }}</h2>
                     </div>
                 </div>
                 <div class="row">

@@ -35,6 +35,11 @@ Route::get('/gioi-thieu.html', function (){
 })->name('frontend.pages.about');
 
 // Liên Hệ
+Route::get('/khach-san.html', function (){
+    return view('theme-default.pages.hotel');
+})->name('frontend.pages.hotel');
+
+// Liên Hệ
 Route::get('/lien-he.html', function (){
     return view('theme-default.pages.contact');
 })->name('frontend.pages.contact');

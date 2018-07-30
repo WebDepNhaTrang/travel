@@ -11,8 +11,7 @@
 
 @section('content')
 <div id="colorlib-main">
-
-    <div class="colorlib-about">
+    <div class="colorlib-about" style="padding: 5em 0;">
         <div class="colorlib-narrow-content">
             <div class="row row-bottom-padded-md">
                 <div class="col-md-6">
@@ -105,8 +104,6 @@
             </div>
         </div>
     </div>
-
-
     <div id="colorlib-counter" class="colorlib-counters" style="background-image: url({{ Voyager::image(setting('about.st3_background')) }});" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="colorlib-narrow-content">
