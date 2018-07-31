@@ -3,7 +3,7 @@
 @section('title', 'Khách Sạn')
 @section('description', '')
 
-@section('fb_url', url('/khach-san.html'))
+@section('fb_url', route('frontend.pages.apartment'))
 @section('fb_type', 'website')
 @section('fb_title', '')
 @section('fb_des', '')

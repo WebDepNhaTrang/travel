@@ -3,7 +3,7 @@
 @section('title', 'Tin Tức')
 @section('description', '')
 
-@section('fb_url', url('/tin-tuc.html'))
+@section('fb_url', route('frontend.pages.news'))
 @section('fb_type', 'website')
 @section('fb_title', '')
 @section('fb_des', '')
@@ -35,10 +35,10 @@
                         @endif
                             <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
                                 <div class="blog-entry">
-                                    <a href="blog.html" class="blog-img"><img src="{{ Voyager::image($v->image) }}" class="img-responsive" alt="{{ $v->title }}"></a>
+                                    <a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="blog-img"><img src="{{ Voyager::image($v->image) }}" class="img-responsive" alt="{{ $v->title }}"></a>
                                     <div class="desc">
                                         <span><small>{{ $v->created_at->format('d-m-Y') }} </small> | <small> Travel </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
-                                        <h3><a href="blog.html">{{ $v->title }}</a></h3>
+                                        <h3><a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->title }}</a></h3>
                                         <p>{{ $v->excerpt }}</p>
                                     </div>
                                 </div>

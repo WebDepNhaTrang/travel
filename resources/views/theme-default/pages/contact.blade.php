@@ -3,7 +3,7 @@
 @section('title', 'Liên Hệ')
 @section('description', '')
 
-@section('fb_url', url('/lien-he.html'))
+@section('fb_url', route('frontend.pages.contact'))
 @section('fb_type', 'website')
 @section('fb_title', '')
 @section('fb_des', '')

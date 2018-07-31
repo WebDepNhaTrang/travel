@@ -3,7 +3,7 @@
 @section('title', 'Trang Chủ')
 @section('description', '')
 
-@section('fb_url', url('/'))
+@section('fb_url', route('frontend.pages.home'))
 @section('fb_type', 'website')
 @section('fb_title', '')
 @section('fb_des', '')

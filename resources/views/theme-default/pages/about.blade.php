@@ -3,7 +3,7 @@
 @section('title', 'Giới Thiệu')
 @section('description', '')
 
-@section('fb_url', url('/gioi-thieu.html'))
+@section('fb_url', route('frontend.pages.about'))
 @section('fb_type', 'website')
 @section('fb_title', '')
 @section('fb_des', '')

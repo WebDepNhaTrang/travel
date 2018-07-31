@@ -49,6 +49,10 @@ Route::get('/tin-tuc.html', function (){
     return view('theme-default.pages.news');
 })->name('frontend.pages.news');
 
+// Chi Tiết Tin Tức
+Route::get('/{slug}_{id}.html', 'FrontendController@newsDetail')
+    ->name('frontend.pages.news-detail');
+
 // Liên Hệ
 Route::get('/lien-he.html', function (){
     return view('theme-default.pages.contact');
