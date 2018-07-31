@@ -46,6 +46,9 @@ Route::get('/khach-san/{slug}_{id}.html', 'FrontendController@hotelDetail')
 Route::get('/can-ho.html', function (){
     return view('theme-default.pages.apartment');
 })->name('frontend.pages.apartment');
+// Chi Tiết Căn Hộ
+Route::get('/can-ho/{slug}_{id}.html', 'FrontendController@apartmentDetail')
+    ->name('frontend.pages.apartment-detail');
 
 // Tin Tức
 Route::get('/tin-tuc.html', function (){

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use TCG\Voyager\Models\Post;
 use App\Hotel;
+use App\Apartment;
 
 class FrontendController extends Controller
 {
@@ -25,5 +26,12 @@ class FrontendController extends Controller
         $hotel = Hotel::where(["slug" => $slug, "id" => $id])->first();
     
         return view('theme-default.pages.hotel-detail')->with(['hotel' => $hotel]);  
+    }
+
+    // Xử lý trang chi tiết căn hộ
+    public function apartmentDetail($slug, $id){
+        $apartment = Apartment::where(["slug" => $slug, "id" => $id])->first();
+    
+        return view('theme-default.pages.apartment-detail')->with(['apartment' => $apartment]);  
     }
 }
