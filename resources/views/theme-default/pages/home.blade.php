@@ -190,102 +190,71 @@
 			<div class="colorlib-narrow-content">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-						<span class="heading-meta">My Work</span>
-						<h2 class="colorlib-heading animate-box">Recent Work</h2>
+						<span class="heading-meta">Khách Sạn Nổi Bật</span>
+						<h2 class="colorlib-heading animate-box">Khách Sạn</h2>
 					</div>
 				</div>
+				<?php
+                $hotels = getAllHotels('*', 'created_at', 'desc', 4);
+				?>
+				@if($hotels->count() > 0)
+				<div class="row row-bottom-padded-md">
+					@foreach($hotels as $v)
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url({{ Voyager::image($v->image) }});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="{{ route('frontend.pages.hotel-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
+										<span class="star-hotel">{!! renderStar($v->star) !!}</span>
+										<span><i class="icon-location"></i> {{ $v->address }}</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					@endforeach
+				</div>
+				@endif
+			</div>
+		</div>
+
+		<div class="colorlib-work">
+			<div class="colorlib-narrow-content">
 				<div class="row">
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-1.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 01</a></h3>
-									<span>Building</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-2.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 02</a></h3>
-									<span>House, Apartment</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-3.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 03</a></h3>
-									<span>Dining Room</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-4.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 04</a></h3>
-									<span>House, Building</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-5.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 05</a></h3>
-									<span>Condo, Pad</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-						<div class="project" style="background-image: url(images/img-6.jpg);">
-							<div class="desc">
-								<div class="con">
-									<h3><a href="work.html">Work 06</a></h3>
-									<span>Table, Chairs</span>
-									<p class="icon">
-										<span><a href="#"><i class="icon-share3"></i></a></span>
-										<span><a href="#"><i class="icon-eye"></i> 100</a></span>
-										<span><a href="#"><i class="icon-heart"></i> 49</a></span>
-									</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<span class="heading-meta">Căn Hộ Nổi Bật</span>
+						<h2 class="colorlib-heading animate-box">Căn Hộ</h2>
 					</div>
 				</div>
+				<?php
+                $apartments = getAllApartments('*', 'created_at', 'desc', 4);
+				?>
+				@if($hotels->count() > 0)
+				<div class="row row-bottom-padded-md">
+					@foreach($apartments as $v)
+						<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url({{ Voyager::image($v->image) }});">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="{{ route('frontend.pages.hotel-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
+										<span class="star-hotel">{!! renderStar($v->star) !!}</span>
+										<span><i class="icon-location"></i> {{ $v->address }}</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#"><i class="icon-eye"></i> 100</a></span>
+											<span><a href="#"><i class="icon-heart"></i> 49</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					@endforeach
+				</div>
+				@endif
 			</div>
 		</div>
 
@@ -293,8 +262,8 @@
 			<div class="colorlib-narrow-content">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-						<span class="heading-meta">Xem</span>
-						<h2 class="colorlib-heading">Tin Tức Mới Nhất</h2>
+						<span class="heading-meta">Tin Tức Mới Nhất</span>
+						<h2 class="colorlib-heading">Tin Tức</h2>
 					</div>
 				</div>
 				<?php
