@@ -44,6 +44,11 @@ Route::get('/can-ho.html', function (){
     return view('theme-default.pages.apartment');
 })->name('frontend.pages.apartment');
 
+// Tin Tức
+Route::get('/tin-tuc.html', function (){
+    return view('theme-default.pages.news');
+})->name('frontend.pages.news');
+
 // Liên Hệ
 Route::get('/lien-he.html', function (){
     return view('theme-default.pages.contact');

@@ -44,6 +44,23 @@ if(! function_exists('getAllApartments')){
 }
 
 /*
+ * @select: string
+ * @cat_id: number
+ * @order_col: string
+ * @order_by: asc/desc
+ * @paginate: number
+ */
+if(! function_exists('getAllPosts')){
+    function getAllPosts($select='*', $cat_id, $order_col, $order_by='asc', $paginate = 3){
+        $item = TCG\Voyager\Models\Post::select($select)
+                    ->where(["status" => "PUBLISHED", "category_id" => $cat_id])
+                    ->orderBy($order_col, $order_by)
+                    ->paginate($paginate);
+        return $item;
+    }
+}
+
+/*
  * @star: number
  * 
  */
