@@ -38,6 +38,9 @@ Route::get('/gioi-thieu.html', function (){
 Route::get('/khach-san.html', function (){
     return view('theme-default.pages.hotel');
 })->name('frontend.pages.hotel');
+// Chi Tiết Khách Sạn
+Route::get('/khach-san/{slug}_{id}.html', 'FrontendController@hotelDetail')
+    ->name('frontend.pages.hotel-detail');
 
 // Căn Hộ
 Route::get('/can-ho.html', function (){

@@ -1,13 +1,14 @@
+
 @extends('theme-default.layouts.master')
 
-@section('title', $news->title)
+@section('title', $hotel->name)
 @section('description', '')
 
-@section('fb_url', route('frontend.pages.news-detail', ['slug' => $news->slug, 'id' => $news->id]))
+@section('fb_url', route('frontend.pages.hotel-detail', ['slug' => $hotel->slug, 'id' => $hotel->id]))
 @section('fb_type', 'website')
-@section('fb_title', $news->title)
+@section('fb_title', '')
 @section('fb_des', '')
-@section('fb_img', Voyager::image($news->image))
+@section('fb_img', '')
 
 @section('content')
     <div id="colorlib-main">
@@ -15,20 +16,23 @@
             <div class="colorlib-narrow-content">
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                        <span class="heading-meta">Tin Tức</span>
-                        <h2 class="colorlib-heading">{{ $news->title }}</h2>
+                        <span class="heading-meta">Khách Sạn</span>
+                        <h2 class="colorlib-heading" style="margin-bottom: 2em;">{{ $hotel->name }}</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                        <span><i class="icon-time"></i> {{ $news->created_at->format('d-m-Y') }}</span>
-                    </div>
                     <div class="col-md-12 col-sm-12 animate-box" data-animate-effect="fadeInLeft">
+                        <div>
+                            <span class="star-hotel">{!! renderStar($hotel->star) !!}</span>
+                        </div>
+                        <div>
+                            <span><i class="icon-location"></i> {{ $hotel->address }}</span>
+                        </div>
                         <div class="mtb-20">
-                            <img class="img-responsive" src="{{ Voyager::image($news->image) }}" alt="{{ $news->title }}">
+                            <div id="gallery"></div>
                         </div>
                         <div class="blog-entry">
-                            {!! $news->body !!}
+                            {!! $hotel->body !!}
                         </div>
                     </div>
                 </div>
@@ -56,4 +60,22 @@
 
 @section('script')
     <!-- Insert script here -->
+    @php
+        $galleries = json_decode($hotel->gallery);
+    @endphp
+    <script>
+        var images = [
+            '{{ Voyager::image($hotel->image) }}',
+            @foreach($galleries as $v)
+                '{{ Voyager::image($v) }}',
+            @endforeach
+        ];
+
+        $(function() {
+            $('#gallery').imagesGrid({
+                images: images
+            });
+        });
+
+    </script>
 @endsection

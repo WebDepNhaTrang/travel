@@ -6,7 +6,7 @@
         <title>@yield('title') | KatiSoft Theme</title>
         <meta name="description" content="@yield('description')">
         <meta name="keywords" content="@yield('keywords')">
-        <meta name="author" content="Thien Pham" />
+        <meta name="author" content="KaTiSoft" />
         <meta http-equiv="content-language" content="{{ app()->getLocale() }}" />
         <meta name="robots" content="index, follow">
         <meta name="revisit-after" content="3 days">
@@ -22,7 +22,7 @@
         <meta property="og:title"         content="@yield('fb_title')" />
         <meta property="og:description"   content="@yield('fb_des')" />
         <meta property="og:image"         content="@yield('fb_img')" />
-        <meta property="og:site_name"     content=""/>
+        <meta property="og:site_name"     content="{{ setting('site.title') }}"/>
 
         <link rel="shortcut icon" type="image/png" href="">
         <!-- Place favicon.ico in the root directory -->

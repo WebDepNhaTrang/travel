@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <?php
-                    $news = getAllPosts('*', 3, 'created_at', 'desc', 3);
+                    $news = getAllPosts('*', 3, 'created_at', 'desc', setting('news.paginate'));
                 ?>
                 @if($news->count() > 0)
                     @php $num = 1; @endphp

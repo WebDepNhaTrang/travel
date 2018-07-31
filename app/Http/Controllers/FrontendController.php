@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use TCG\Voyager\Models\Post;
+use App\Hotel;
 
 class FrontendController extends Controller
 {
@@ -17,5 +18,12 @@ class FrontendController extends Controller
         //     ->skip(4)->take(5)->get();
         return view('theme-default.pages.news-detail')->with(['news' => $news]);
         
+    }
+
+    // Xử lý trang chi tiết khách sạn
+    public function hotelDetail($slug, $id){
+        $hotel = Hotel::where(["slug" => $slug, "id" => $id])->first();
+    
+        return view('theme-default.pages.hotel-detail')->with(['hotel' => $hotel]);  
     }
 }
