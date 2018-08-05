@@ -7,7 +7,7 @@
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                <p class="colorlib-lead">{!! setting('about.st4_body') !!}</p>
+                <div class="colorlib-lead">{!! setting('about.st4_body') !!}</div>
                 <p><a href="{{ route('frontend.pages.contact') }}" class="btn btn-primary btn-learn">Liên hệ với chúng tôi!</a></p>
             </div>
             

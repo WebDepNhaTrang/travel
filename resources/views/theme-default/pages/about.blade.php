@@ -24,32 +24,12 @@
                         <h2 class="colorlib-heading">{{ setting('about.st1_heading') }}</h2>
                         <p>{!! setting('about.st1_body') !!}</p>
                     </div>
-                    <!-- <div class="row padding">
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps active">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>We are <br>pasionate</h3>
-                            </a>
-                        </div>
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>Honest <br>Dependable</h3>
-                            </a>
-                        </div>
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>Always <br>Improving</h3>
-                            </a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                     <h2 class="colorlib-heading">{{ setting('about.st2_heading') }}</h2>
-                    <p>{{ setting('about.st2_body') }}</p>
+                    <p>{!! setting('about.st2_body') !!}</p>
                 </div>
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInRight">
                     <div class="fancy-collapse-panel">
@@ -65,7 +45,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <p>{{ setting('about.accordion1_body') }}</p>
+                                                <p>{!! setting('about.accordion1_body') !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +60,7 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                     <div class="panel-body">
-                                        <p>{{ setting('about.accordion2_body') }}</p>
+                                        <p>{!! setting('about.accordion2_body') !!}</p>
                                             
                                     </div>
                                 </div>
@@ -94,7 +74,7 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        <p>{{ setting('about.accordion3_body') }}</p>	
+                                        <p>{!! setting('about.accordion3_body') !!}</p>	
                                     </div>
                                 </div>
                             </div>
