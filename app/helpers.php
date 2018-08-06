@@ -78,5 +78,40 @@ if(! function_exists('renderStar')){
     }
 }
 
+/*
+ * Count Hotel
+ * 
+ */
+if(! function_exists('counterHotels')){
+    function counterHotels(){
+        $hotels_num = App\Hotel::all()->count();
+        return $hotels_num;
+    }
+}
+
+/*
+ * Count Apartment
+ * 
+ */
+if(! function_exists('counterApartments')){
+    function counterApartments(){
+        $apartments_num = App\Apartment::all()->count();
+        return $apartments_num;
+    }
+}
+
+/*
+ * Count News
+ * 
+ */
+if(! function_exists('counterNews')){
+    function counterNews(){
+        $news_num = TCG\Voyager\Models\Post::select('*')
+            ->where(["status" => "PUBLISHED", "category_id" => 3])
+            ->get()
+            ->count();
+        return $news_num;
+    }
+}
 
 ?>

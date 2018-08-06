@@ -66,26 +66,26 @@
 				<div class="row">
 				</div>
 				<div class="row">
-					<div class="col-md-3 text-center animate-box">
+					<div class="col-md-4 text-center animate-box">
 						<span class="icon"><i class="flaticon-hotel"></i></span>
-						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number1') }}" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="colorlib-counter-label">{{ setting('about.st3_title1') }}</span>
+						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterHotels() }}" data-speed="2000" data-refresh-interval="50"></span>
+						<span class="colorlib-counter-label">Khách Sạn</span>
 					</div>
-					<div class="col-md-3 text-center animate-box">
+					<div class="col-md-4 text-center animate-box">
 						<span class="icon"><i class="flaticon-hotel-2"></i></span>
-						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number2') }}" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="colorlib-counter-label">{{ setting('about.st3_title2') }}</span>
+						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterApartments() }}" data-speed="2000" data-refresh-interval="50"></span>
+						<span class="colorlib-counter-label">Căn Hộ</span>
 					</div>
-					<div class="col-md-3 text-center animate-box">
+					<div class="col-md-4 text-center animate-box">
 						<span class="icon"><i class="flaticon-money"></i></span>
-						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number3') }}" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="colorlib-counter-label">{{ setting('about.st3_title3') }}</span>
+						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterNews() }}" data-speed="2000" data-refresh-interval="50"></span>
+						<span class="colorlib-counter-label">Tin Tức</span>
 					</div>
-					<div class="col-md-3 text-center animate-box">
+					<!-- <div class="col-md-3 text-center animate-box">
 						<span class="icon"><i class="flaticon-family"></i></span>
-						<span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number4') }}" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="colorlib-counter-label">{{ setting('about.st3_title4') }}</span>
-					</div>
+						<span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50"></span>
+						<span class="colorlib-counter-label"></span>
+					</div> -->
 				</div>
 			</div>
 		</div>
