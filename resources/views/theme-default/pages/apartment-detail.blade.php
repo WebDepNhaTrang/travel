@@ -45,7 +45,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                        <p class="colorlib-lead">{{ setting('about.st4_body') }}</p>
+                        <p class="colorlib-lead">{!! setting('about.st4_body') !!}</p>
                         <p><a href="{{ route('frontend.pages.contact') }}" class="btn btn-primary btn-learn">Liên hệ với chúng tôi!</a></p>
                     </div>
                     
