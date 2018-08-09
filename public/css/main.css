@@ -45,3 +45,10 @@
 .star-hotel{
     color: #f9c446 !important;
 }
+
+@media screen and (min-width: 768px) {
+    .imgs-grid-modal{
+        width: 80%;
+        left: auto;
+    }
+}

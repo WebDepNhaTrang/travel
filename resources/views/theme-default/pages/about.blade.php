@@ -24,32 +24,12 @@
                         <h2 class="colorlib-heading">{{ setting('about.st1_heading') }}</h2>
                         <p>{!! setting('about.st1_body') !!}</p>
                     </div>
-                    <!-- <div class="row padding">
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps active">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>We are <br>pasionate</h3>
-                            </a>
-                        </div>
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>Honest <br>Dependable</h3>
-                            </a>
-                        </div>
-                        <div class="col-md-4 no-gutters animate-box" data-animate-effect="fadeInLeft">
-                            <a href="#" class="steps">
-                                <p class="icon"><span><i class="icon-check"></i></span></p>
-                                <h3>Always <br>Improving</h3>
-                            </a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                     <h2 class="colorlib-heading">{{ setting('about.st2_heading') }}</h2>
-                    <p>{{ setting('about.st2_body') }}</p>
+                    <p>{!! setting('about.st2_body') !!}</p>
                 </div>
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInRight">
                     <div class="fancy-collapse-panel">
@@ -65,7 +45,7 @@
                                     <div class="panel-body">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <p>{{ setting('about.accordion1_body') }}</p>
+                                                <p>{!! setting('about.accordion1_body') !!}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +60,7 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                     <div class="panel-body">
-                                        <p>{{ setting('about.accordion2_body') }}</p>
+                                        <p>{!! setting('about.accordion2_body') !!}</p>
                                             
                                     </div>
                                 </div>
@@ -94,7 +74,7 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        <p>{{ setting('about.accordion3_body') }}</p>	
+                                        <p>{!! setting('about.accordion3_body') !!}</p>	
                                     </div>
                                 </div>
                             </div>
@@ -110,30 +90,31 @@
             <div class="row">
             </div>
             <div class="row">
-                <div class="col-md-3 text-center animate-box">
+                <div class="col-md-4 text-center animate-box">
                     <span class="icon"><i class="flaticon-hotel"></i></span>
-                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number1') }}" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="colorlib-counter-label">{{ setting('about.st3_title1') }}</span>
+                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterHotels() }}" data-speed="2000" data-refresh-interval="50"></span>
+                    <span class="colorlib-counter-label">Khách Sạn</span>
                 </div>
-                <div class="col-md-3 text-center animate-box">
+                <div class="col-md-4 text-center animate-box">
                     <span class="icon"><i class="flaticon-hotel-2"></i></span>
-                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number2') }}" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="colorlib-counter-label">{{ setting('about.st3_title2') }}</span>
+                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterApartments() }}" data-speed="2000" data-refresh-interval="50"></span>
+                    <span class="colorlib-counter-label">Căn Hộ</span>
                 </div>
-                <div class="col-md-3 text-center animate-box">
+                <div class="col-md-4 text-center animate-box">
                     <span class="icon"><i class="flaticon-money"></i></span>
-                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number3') }}" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="colorlib-counter-label">{{ setting('about.st3_title3') }}</span>
+                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ counterNews() }}" data-speed="2000" data-refresh-interval="50"></span>
+                    <span class="colorlib-counter-label">Tin Tức</span>
                 </div>
-                <div class="col-md-3 text-center animate-box">
+                <!-- <div class="col-md-3 text-center animate-box">
                     <span class="icon"><i class="flaticon-family"></i></span>
-                    <span class="colorlib-counter js-counter" data-from="0" data-to="{{ setting('about.st3_number4') }}" data-speed="5000" data-refresh-interval="50"></span>
-                    <span class="colorlib-counter-label">{{ setting('about.st3_title4') }}</span>
-                </div>
+                    <span class="colorlib-counter js-counter" data-from="0" data-to="1" data-speed="5000" data-refresh-interval="50"></span>
+                    <span class="colorlib-counter-label"></span>
+                </div> -->
             </div>
         </div>
     </div>
 
+<<<<<<< HEAD
     <div id="get-in-touch" class="colorlib-bg-color">
         <div class="colorlib-narrow-content">
             <div class="row">
@@ -150,6 +131,9 @@
             </div>
         </div>
     </div>
+=======
+    @include('theme-default.partials.get-it-touch')
+>>>>>>> master
 </div>
 @endsection
 

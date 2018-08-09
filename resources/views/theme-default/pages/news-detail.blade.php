@@ -24,9 +24,6 @@
                         <span><i class="icon-time"></i> {{ $news->created_at->format('d-m-Y') }}</span>
                     </div>
                     <div class="col-md-12 col-sm-12 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="mtb-20">
-                            <img class="img-responsive" src="{{ Voyager::image($news->image) }}" alt="{{ $news->title }}">
-                        </div>
                         <div class="blog-entry">
                             {!! $news->body !!}
                         </div>
@@ -35,6 +32,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div id="get-in-touch" class="colorlib-bg-color">
             <div class="colorlib-narrow-content">
                 <div class="row">
@@ -51,6 +49,9 @@
                 </div>
             </div>
         </div>
+=======
+        @include('theme-default.partials.get-it-touch')
+>>>>>>> master
     </div>
 @endsection
 

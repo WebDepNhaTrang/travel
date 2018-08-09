@@ -39,6 +39,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         <div id="get-in-touch" class="colorlib-bg-color">
             <div class="colorlib-narrow-content">
                 <div class="row">
@@ -55,6 +56,9 @@
                 </div>
             </div>
         </div>
+=======
+        @include('theme-default.partials.get-it-touch')
+>>>>>>> master
     </div>
 @endsection
 
