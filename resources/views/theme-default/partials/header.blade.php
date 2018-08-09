@@ -1,4 +1,5 @@
 
+
 <h1 id="colorlib-logo">
     @if(setting('site.logo'))
     <a href="{{ route('frontend.pages.home') }}">
@@ -8,6 +9,7 @@
     <a href="{{ route('frontend.pages.home') }}">{{ setting('site.title') }}</a>
     @endif
 </h1>
+
 <nav id="colorlib-main-menu" role="navigation">
     {{ menu('frontend', 'theme-default.partials.main-menu') }}
 </nav>
