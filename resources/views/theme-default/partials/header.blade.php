@@ -1,5 +1,4 @@
 
-
 <h1 id="colorlib-logo">
     @if(setting('site.logo'))
     <a href="{{ route('frontend.pages.home') }}">
