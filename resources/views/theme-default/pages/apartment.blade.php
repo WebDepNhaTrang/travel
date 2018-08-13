@@ -31,11 +31,11 @@
                                 <div class="con">
                                     <h3><a href="{{ route('frontend.pages.apartment-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
                                     <span><i class="icon-location"></i> {{ $v->address }}</span>
-                                    <p class="icon">
+                                    <!-- <p class="icon">
                                         <span><a href="#"><i class="icon-share3"></i></a></span>
                                         <span><a href="#"><i class="icon-eye"></i> 100</a></span>
                                         <span><a href="#"><i class="icon-heart"></i> 49</a></span>
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                         </div>
