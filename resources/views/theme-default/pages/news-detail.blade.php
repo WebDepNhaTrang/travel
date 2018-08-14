@@ -20,13 +20,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                    <div class="col-md-12 animate-box mb-10" data-animate-effect="fadeInLeft">
                         <span><i class="icon-time"></i> {{ $news->created_at->format('d-m-Y') }}</span>
                     </div>
+                    <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="fb-like" data-href="{{ route('frontend.pages.news-detail', ['slug' => $news->slug, 'id' => $news->id]) }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+                    </div>
+                    
                     <div class="col-md-12 col-sm-12 animate-box" data-animate-effect="fadeInLeft">
                         <div class="blog-entry">
                             {!! $news->body !!}
                         </div>
+                        <div class="fb-comments" data-href="{{ route('frontend.pages.news-detail', ['slug' => $news->slug, 'id' => $news->id]) }}" data-width="100%" data-numposts="5"></div>
                     </div>
                 </div>
             </div>

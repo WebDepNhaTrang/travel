@@ -27,6 +27,9 @@
 								<div class="col-md-6 col-md-offset-3 col-md-push-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 									<div class="slider-text-inner">
 										<div class="desc">
+											<div class="close">
+												<i class="icon-arrow-down"></i>
+											</div>
 											<h1>{{ $v->title }}</h1>
 											<h2>{{ $v->content }}</h2>
 												<p><a href="{{ $v->link_btn }}" class="btn btn-primary btn-learn">{{ $v->text_btn }} <i class="icon-arrow-right3"></i></a></p>
@@ -94,8 +97,8 @@
 			<div class="colorlib-narrow-content">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-						<span class="heading-meta">Khách Sạn Nổi Bật</span>
-						<h2 class="colorlib-heading animate-box">Khách Sạn</h2>
+						<span class="heading-meta">{{ setting('hotel.title')}}</span>
+						<h2 class="colorlib-heading animate-box">{{ setting('hotel.heading') }}</h2>
 					</div>
 				</div>
 				<?php
@@ -108,8 +111,10 @@
 							<div class="project" style="background-image: url({{ Voyager::image($v->image) }});">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="{{ route('frontend.pages.hotel-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
-										<span class="star-hotel">{!! renderStar($v->star) !!}</span>
+										<h3>
+											<a href="{{ route('frontend.pages.hotel-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a>
+											<span class="star-hotel">{!! renderStar($v->star) !!}</span>
+										</h3>
 										<span><i class="icon-location"></i> {{ $v->address }}</span>
 										<!-- <p class="icon">
 											<span><a href="#"><i class="icon-share3"></i></a></span>
@@ -130,8 +135,8 @@
 			<div class="colorlib-narrow-content">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-						<span class="heading-meta">Căn Hộ Nổi Bật</span>
-						<h2 class="colorlib-heading animate-box">Căn Hộ</h2>
+						<span class="heading-meta">{{ setting('apartment.title') }}</span>
+						<h2 class="colorlib-heading animate-box">{{ setting('apartment.heading') }}</h2>
 					</div>
 				</div>
 				<?php
@@ -166,8 +171,8 @@
 			<div class="colorlib-narrow-content">
 				<div class="row">
 					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-						<span class="heading-meta">Tin Tức Mới Nhất</span>
-						<h2 class="colorlib-heading">Tin Tức</h2>
+						<span class="heading-meta">{{ setting('news.title') }}</span>
+						<h2 class="colorlib-heading">{{ setting('news.heading') }}</h2>
 					</div>
 				</div>
 				<?php
@@ -180,9 +185,9 @@
 							<div class="blog-entry">
 								<a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="blog-img"><img src="{{ Voyager::image($v->image) }}" class="img-responsive" alt="{{ $v->title }}"></a>
 								<div class="desc">
-									<span><small>{{ $v->created_at->format('d-m-Y') }} </small> | <small> Aloroom </small>
+									<span><small>{{ $v->created_at->format('d-m-Y') }} </small> | <small> Aloroom </small></span>
 									<h3><a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->title }}</a></h3>
-									<p>{{ $v->excerpt }}</p>
+									<p class="excerpt">{{ shorten_text($v->excerpt, 170, '...', true) }}</p>
 								</div>
 							</div>
 						</div>
@@ -198,6 +203,13 @@
 @endsection
 
 @section('script')
-    <!-- Insert script here -->
+	<!-- Insert script here -->
+	<script>
+		$('.slider-text-inner .desc .close').click(function(){
+			$('.slider-text-inner .desc h2').toggle(1000);
+			$('.slider-text-inner .desc p').toggle(1000);
+			$("i", this).toggleClass("icon-arrow-up icon-arrow-down");
+		});
+	</script>
 @endsection
     

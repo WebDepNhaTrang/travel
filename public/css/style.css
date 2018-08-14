@@ -16,8 +16,8 @@
     font-family: "Quicksand", Arial, sans-serif;
     font-weight: 400;
     font-size: 15px;
-    line-height: 1.8;
-    color: rgba(0, 0, 0, 0.7); }
+    line-height: 1.5;
+    color: #070719; }
     @media screen and (max-width: 992px) {
       body {
         font-size: 16px; } }
@@ -33,13 +33,13 @@
       text-decoration: none !important; }
   
   p {
-    margin-bottom: 1.5em; }
+    margin-bottom: 0.5em; }
   
   h1, h2, h3, h4, h5, h6 {
-    color: #000;
+    color: #070719;
     font-family: "Quicksand", Arial, sans-serif;
     font-weight: 400;
-    margin: 0 0 30px 0; }
+    margin: 0 0 10px 0; }
   
   figure {
     margin-bottom: 2.5em;
@@ -83,7 +83,7 @@
     bottom: 0;
     top: 0;
     left: 0;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     z-index: 1001;
     background: #2C2C2C;
     -webkit-transition: 0.5s;
@@ -287,7 +287,7 @@
             position: absolute;
             bottom: 0;
             right: -15px;
-            padding: 30px;
+            padding: 20px;
             background: #FFC300; }
             @media screen and (max-width: 768px) {
               #colorlib-hero .flexslider .slider-text > .slider-text-inner .desc {
@@ -302,7 +302,7 @@
             color: black;
             font-family: "Quicksand", Arial, sans-serif; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-size: 44px;
             line-height: 1.3;
             font-weight: 300; }
@@ -312,7 +312,7 @@
           #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
             font-size: 18px;
             line-height: 1.5;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             font-weight: 300;
             font-family: "Quicksand", Arial, sans-serif; }
             #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 a {
@@ -406,7 +406,7 @@
   
   .colorlib-heading {
     font-size: 18px;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -431,7 +431,7 @@
     display: block;
     font-size: 10px;
     text-transform: uppercase;
-    color: #999999;
+    color: #070719;
     font-weight: 500;
     letter-spacing: 5px; }
   
@@ -668,8 +668,8 @@
         transition: 0.3s; }
     .blog-entry .desc h3 {
       font-size: 16px;
-      margin-bottom: 25px;
-      line-height: auto;
+      margin-bottom: 10px;
+      line-height: 25px;
       font-weight: 500;
       text-transform: uppercase;
       letter-spacing: 1px; }
@@ -678,7 +678,7 @@
         text-decoration: none; }
     .blog-entry .desc span {
       display: block;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 12px;
       color: rgba(0, 0, 0, 0.4) !important;
       text-transform: uppercase;
@@ -751,6 +751,7 @@
             font-size: 16px;
             color: #cccccc; }
       .project .desc h3 {
+        line-height: 1.5;
         font-size: 16px;
         font-weight: 500;
         text-transform: uppercase;
@@ -763,7 +764,7 @@
         transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
         -webkit-transform: translate3d(0, -15px, 0);
         transform: translate3d(0, -15px, 0);
-        margin-bottom: 15px; }
+        margin-bottom: 10px; }
         .project .desc h3 a {
           color: #fff; }
       .project .desc span {
@@ -885,7 +886,24 @@
     line-height: 1.5; }
   
   #get-in-touch {
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    text-align: right;
     padding: 3em 0; }
+    #get-in-touch .overlay{
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    #get-in-touch h2{
+      color: #fff;
+    }
     #get-in-touch .btn-learn {
       padding: 15px 30px !important;
       font-size: 13px;
@@ -945,7 +963,7 @@
       margin: 2px; }
       .pagination li a {
         color: #000;
-        background: transparent;
+        background: #fff;
         color: #000;
         margin: 2px;
         -webkit-border-radius: 0;
@@ -1255,3 +1273,24 @@
       float: left;
       padding-top: 30px; } }
   
+.blog-entry .desc .excerpt{
+  height: 65px;
+  overflow: hidden;
+}
+
+.star-hotel{
+  text-align: center;
+  font-size: 17px !important;  
+  margin-top: 10px;
+}
+
+.slider-text-inner .desc .close{
+  font-size: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.slider-text-inner .desc .close:hover{
+  cursor: pointer;
+}

@@ -37,9 +37,9 @@
                                 <div class="blog-entry">
                                     <a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}" class="blog-img"><img src="{{ Voyager::image($v->image) }}" class="img-responsive" alt="{{ $v->title }}"></a>
                                     <div class="desc">
-                                        <span><small>{{ $v->created_at->format('d-m-Y') }} </small> | <small> Travel </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+                                        <span><small>{{ $v->created_at->format('d-m-Y') }} </small> | <small> Aloroom </small></span>
                                         <h3><a href="{{ route('frontend.pages.news-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->title }}</a></h3>
-                                        <p>{{ $v->excerpt }}</p>
+                                        <p class="excerpt">{{ shorten_text($v->excerpt, 170, '...', true) }}</p>
                                     </div>
                                 </div>
                             </div>
