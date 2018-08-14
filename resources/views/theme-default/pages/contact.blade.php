@@ -5,7 +5,7 @@
 
 @section('fb_url', route('frontend.pages.contact'))
 @section('fb_type', 'website')
-@section('fb_title', '')
+@section('fb_title', 'Liên Hệ')
 @section('fb_des', '')
 @section('fb_img', '')
 
@@ -27,7 +27,7 @@
                                 <i class="icon-globe-outline"></i>
                             </div>
                             <div class="colorlib-text">
-                                <p><a href="mailto:{{ setting('contact.email') }}">{{ setting('contact.email') }}</a></p>
+                                <p><a style="color: #070719;" href="mailto:{{ setting('contact.email') }}">{{ setting('contact.email') }}</a></p>
                             </div>
                         </div>
 
@@ -45,7 +45,7 @@
                                 <i class="icon-phone"></i>
                             </div>
                             <div class="colorlib-text">
-                                <p><a href="tel:{{ setting('contact.phone') }}">{{ setting('contact.phone') }}</a></p>
+                                <p><a style="color: #070719;" href="tel:{{ setting('contact.phone') }}">{{ setting('contact.phone') }}</a></p>
                             </div>
                         </div>
                     </div>

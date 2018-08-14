@@ -106,7 +106,7 @@
       font-weight: 700;
       font-size: 22px;
       text-transform: uppercase;
-      margin-bottom: 3em;
+      margin-bottom: 0em;
       display: block;
       width: 100%; }
       @media screen and (max-width: 768px) {
@@ -254,6 +254,7 @@
         width: auto; }
         @media screen and (max-width: 768px) {
           #colorlib-hero .flexslider .flex-control-nav {
+            height: 100px;
             right: 20px;
             top: 100px; } }
         #colorlib-hero .flexslider .flex-control-nav li {
@@ -925,7 +926,7 @@
       zoom: 1;
       *display: inline; }
       .colorlib-social li a {
-        font-size: 22px;
+        font-size: 15px;
         color: #000;
         padding: 10px;
         display: -moz-inline-stack;
@@ -1294,3 +1295,38 @@
 .slider-text-inner .desc .close:hover{
   cursor: pointer;
 }
+
+#colorlib-aside .colorlib-social {
+  /* position: absolute; */
+  /* bottom: 40px; */
+  /* right: 0; */
+  /* left: 0; */
+  /* font-size: 15px; */
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  padding: 0 20px;
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    #colorlib-aside .colorlib-social {
+      position: relative;
+      bottom: 0; } }
+  #colorlib-aside .colorlib-social span {
+    display: block; }
+  #colorlib-aside .colorlib-social ul {
+    padding: 0;
+    margin: 0; }
+    #colorlib-aside .colorlib-social ul li {
+      padding: 0;
+      margin: 0;
+      display: inline;
+      list-style: none; }
+      #colorlib-aside .colorlib-social ul li a {
+        color: rgba(255, 255, 255, 0.3);
+        padding: 4px; }
+        #colorlib-aside .colorlib-social ul li a:hover, #colorlib-aside .colorlib-social ul li a:active, #colorlib-aside .colorlib-social ul li a:focus {
+          text-decoration: none;
+          outline: none;
+          color: #FFC300; }
