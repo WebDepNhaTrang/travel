@@ -149,7 +149,7 @@
 							<div class="project" style="background-image: url({{ Voyager::image($v->image) }});">
 								<div class="desc">
 									<div class="con">
-										<h3><a href="{{ route('frontend.pages.hotel-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
+										<h3><a href="{{ route('frontend.pages.apartment-detail', ['slug' => $v->slug, 'id' => $v->id]) }}">{{ $v->name }}</a></h3>
 										<span class="star-hotel">{!! renderStar($v->star) !!}</span>
 										<span><i class="icon-location"></i> {{ $v->address }}</span>
 										<!-- <p class="icon">
