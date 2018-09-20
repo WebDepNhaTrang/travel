@@ -12,7 +12,7 @@
   *
   * ======================================================= */
   body {
-    background-color: #F6D8CE;
+    background-color: #FFFFCC;
     font-family: "Quicksand", Arial, sans-serif;
     font-weight: 400;
     font-size: 15px;
@@ -644,7 +644,7 @@
   .blog-entry {
     width: 100%;
     float: left;
-    background: #F6D8CE;
+    background: #FFFFCC;
     margin-bottom: 3em; }
     @media screen and (max-width: 768px) {
       .blog-entry {
